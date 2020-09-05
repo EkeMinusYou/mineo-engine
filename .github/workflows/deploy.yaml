@@ -13,6 +13,7 @@ jobs:
         with:
           submodules: recursive
       - run: brew install hugo && hugo
+      - run: cp ./.aws/codedeploy/appspec.yaml ./public/
       - run: zip -r public.zip ./public/ && mkdir aws-s3 && cp public.zip ./aws-s3
       - uses: aws-actions/configure-aws-credentials@v1
         with:
