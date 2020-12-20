@@ -1,4 +1,5 @@
-baseURL: 'https://mineo-engine.com/'
+# baseURL: 'https://mineo-engine.com/'
+baseURL: 'https://mineo-engine.web.app/'
 title: Mineo Blog
 author: Mineo Yusuke
 
