@@ -1,6 +1,6 @@
 baseURL: 'https://mineo-engine.com/'
 title: 'mineoの技術雑記的な何か'
-author: Mineo Yusuke
+author: mineo
 
 paginate: 5
 languageCode: en
@@ -26,7 +26,7 @@ params:
 
   homeInfoParams:
     Title: "Hi there \U0001F44B"
-    Content: Welcome to my blog
+    Content: 'mineoが書く技術ブログ的な何かです'
 
   socialIcons:
     - name: twitter
