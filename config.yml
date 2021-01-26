@@ -2,6 +2,8 @@ baseURL: 'https://mineo-engine.com/'
 title: 'mineoの技術ブログ的な何か'
 author: mineo
 
+googleAnalytics: 'G-5WBHC5L2WE'
+
 paginate: 5
 languageCode: en
 DefaultContentLanguage: en
