@@ -8,7 +8,7 @@ DefaultContentLanguage: en
 enableInlineShortcodes: true
 theme: hugo-PaperMod
 
-googleAnalytics: G-5WBHC5L2WE
+googleAnalytics: G-FJXPX2WG7N
 
 params:
   ShowReadingTime: false
