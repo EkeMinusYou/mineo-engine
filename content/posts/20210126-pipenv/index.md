@@ -1,6 +1,6 @@
 +++
 title = "pipenvがnpmみたいに使えて便利そう"
-date = "2021-01-26T00:00:00+09:00"
+date = 2021-01-26T00:00:00+09:00
 tags = [
   "Python",
   "pipenv",
