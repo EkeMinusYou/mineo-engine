@@ -1,36 +1,31 @@
-+++
-title = "pipenvがnpmみたいに使えて便利そう"
-date = 2021-01-26T00:00:00+09:00
-tags = [
-  "Python",
-  "pipenv",
-]
-+++
+---
+title: "pipenvがnpmみたいに使えて便利そう"
+date: 2021-01-26T00:00:00+09:00
+tags: ["Python", "pipenv"]
+---
 
 ## まえがき
 
-最近久々にPythonを触ってみました。
+最近久々に Python を触ってみました。
 
-Pythonといえばバージョン管理を考えるのが厄介だなという印象でした。
+Python といえばバージョン管理を考えるのが厄介だなという印象でした。
 
+なにぶん macos ではデフォルトで Python2 が入っているので、Python3 を使うにはバージョン管理ソフトが必須となります。
+バージョン管理のツールだと pyenv やら virtualenv やら入り乱れていて、何がデファクトスタンダードだかよくわからないのが実情だったと思います。
 
-なにぶんmacosではデフォルトでPython2が入っているので、Python3を使うにはバージョン管理ソフトが必須となります。
-バージョン管理のツールだとpyenvやらvirtualenvやら入り乱れていて、何がデファクトスタンダードだかよくわからないのが実情だったと思います。
-
-
-今回あらためてPythonを書くにあたり調べたところ、どうやら [pipenv](https://github.com/pypa/pipenv) がもっとも有力なバージョン管理であり、さらにパッケージの管理までしてしてくれるとのことで便利そうだなと思い使ってみました。
+今回あらためて Python を書くにあたり調べたところ、どうやら [pipenv](https://github.com/pypa/pipenv) がもっとも有力なバージョン管理であり、さらにパッケージの管理までしてしてくれるとのことで便利そうだなと思い使ってみました。
 
 結論としては、 `pipenv` はバージョン管理+パッケージ管理ができる素晴らしいツールですが、ややデメリットもあるかなというところです。
 
 ### 導入(mac)
 
-READMEには書かれていないですが普通にbrewでinstallできます。
+README には書かれていないですが普通に brew で install できます。
 
 ```bash
 brew install pipenv
 ```
 
-Pythonのディレクトリで以下を実施して仮想環境を初期化します。このときPythonのバージョンを指定して、そのバージョンで初期化することができます。
+Python のディレクトリで以下を実施して仮想環境を初期化します。このとき Python のバージョンを指定して、そのバージョンで初期化することができます。
 
 ```bash
 pipenv --Python 3.8
@@ -40,9 +35,9 @@ pipenv --Python 3.8
 
 https://pipenv-ja.readthedocs.io/ja/translate-ja/advanced.html#pipenv.environments.PIPENV_VENV_IN_PROJECT
 
-VSCodeでは `.venv` にPython環境があった方がインタプリターを指定しやすいので、なるべく設定した方が良いと思われ。
+VSCode では `.venv` に Python 環境があった方がインタプリターを指定しやすいので、なるべく設定した方が良いと思われ。
 
-初期化すると以下のように `Pipfile` が生成されます。`Pipfile` がnpmでいうpackage.jsonに当たるファイルのようです。
+初期化すると以下のように `Pipfile` が生成されます。`Pipfile` が npm でいう package.json に当たるファイルのようです。
 
 ```
 [[source]]
@@ -58,12 +53,12 @@ name = "pypi"
 python_version = "3.8"
 ```
 
-何やらnpmと同じような雰囲気を感じますね。
+何やら npm と同じような雰囲気を感じますね。
 
-### pipenv環境に入るには
+### pipenv 環境に入るには
 
-`pipenv shell` を用います。その後、pipenv環境で `python` コマンドなどが使えるようになります。
-ちょっとした動作確認などnpmでいう `npx` と同じような目的で使われる機能ですね。
+`pipenv shell` を用います。その後、pipenv 環境で `python` コマンドなどが使えるようになります。
+ちょっとした動作確認など npm でいう `npx` と同じような目的で使われる機能ですね。
 
 ```bash
 $ pipenv shell
@@ -74,7 +69,7 @@ $ python app.py
 
 ### パッケージ管理
 
-#### packageを追加
+#### package を追加
 
 ```bash
 pipenv install numpy
@@ -97,7 +92,7 @@ To activate this project's virtualenv, run pipenv shell.
 Alternatively, run a command inside the virtualenv with pipenv run.
 ```
 
-`Pipfile` が以下のようになり `numpy` が追加されました。また、 `Pipfile.lock` が生成されます。 npmでいうpackage-lock.jsonに当たるファイルのようです。
+`Pipfile` が以下のようになり `numpy` が追加されました。また、 `Pipfile.lock` が生成されます。 npm でいう package-lock.json に当たるファイルのようです。
 
 ```
 [[source]]
@@ -114,9 +109,9 @@ numpy = "*"
 python_version = "3.8"
 ```
 
-また、devでinstallする場合は `--dev` をつけるようです
+また、dev で install する場合は `--dev` をつけるようです
 
-#### packageを削除
+#### package を削除
 
 ```bash
 pipenv uninstall numpy
@@ -139,9 +134,9 @@ To activate this project's virtualenv, run pipenv shell.
 Alternatively, run a command inside the virtualenv with pipenv run.
 ```
 
-#### requirements.txtに出力
+#### requirements.txt に出力
 
-何かと必要な `requirements.txt` にpackageを出力することもできます。
+何かと必要な `requirements.txt` に package を出力することもできます。
 
 https://pipenv-ja.readthedocs.io/ja/translate-ja/advanced.html#generating-a-requirements-txt
 
@@ -149,15 +144,15 @@ https://pipenv-ja.readthedocs.io/ja/translate-ja/advanced.html#generating-a-requ
 pipenv lock -r > requirements.txt
 ```
 
-### Pipfileから環境構築
+### Pipfile から環境構築
 
-pipenvの仮想環境が構築され、Pipfileのpackageがまとめてinstallされます。
+pipenv の仮想環境が構築され、Pipfile の package がまとめて install されます。
 
 ```bash
 pipenv install
 ```
 
-devも含めてinstall
+dev も含めて install
 
 ```bash
 pipenv install --dev
@@ -165,17 +160,17 @@ pipenv install --dev
 
 #### 構築した環境を削除
 
-以下でinstallしたpackageやPythonの仮想環境などを全て削除します。
+以下で install した package や Python の仮想環境などを全て削除します。
 
 ```bash
 pipenv --rm
 ```
 
-npmだとnode_modulesを手動で消さないといけないので、この点はnpmより使い勝手が良いですね。
+npm だと node_modules を手動で消さないといけないので、この点は npm より使い勝手が良いですね。
 
 ### scripts
 
-pipenvでもnpmのように任意のscriptsを設定することができます。
+pipenv でも npm のように任意の scripts を設定することができます。
 
 ```
 [[source]]
@@ -199,7 +194,7 @@ python_version = "3.8"
 pipenv run start
 ```
 
-ただし、ここで気をつけないといけないのはscriptをで使えない文字列があることです。例えば、以下のように `requirements.txt` に出力するscriptsを設定した場合、残念な結果になります。
+ただし、ここで気をつけないといけないのは script をで使えない文字列があることです。例えば、以下のように `requirements.txt` に出力する scripts を設定した場合、残念な結果になります。
 
 ```
 [scripts]
@@ -214,11 +209,11 @@ Try 'pipenv lock -h' for help.
 Error: Got unexpected extra arguments (> requirements.txt)
 ```
 
-また、 `&&` も使えないため複数のscriptを組み合わせることもできません。私的にはこれが一番残念な点でした。
-issueで議論されていましたが、どうもpipenvではPipfileではなく `invoke` というタスクランナーを使って解決するべきという結論のようです。
+また、 `&&` も使えないため複数の script を組み合わせることもできません。私的にはこれが一番残念な点でした。
+issue で議論されていましたが、どうも pipenv では Pipfile ではなく `invoke` というタスクランナーを使って解決するべきという結論のようです。
 
 https://github.com/pypa/pipenv/issues/2038#issuecomment-505493265
 
 ## おわりに
 
-scripts で `&&` が使えないなど少し残念な点はありましたが、バージョン管理を含めた環境構築ができるので、Pipenvはチーム開発に適したツールだと思います。全体的な使い勝手もnpmに近く直感的にわかりやすいです。
+scripts で `&&` が使えないなど少し残念な点はありましたが、バージョン管理を含めた環境構築ができるので、Pipenv はチーム開発に適したツールだと思います。全体的な使い勝手も npm に近く直感的にわかりやすいです。
