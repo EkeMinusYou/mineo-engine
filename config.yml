@@ -26,6 +26,12 @@ params:
       - name: Tags
         url: tags
 
+  assets:
+    favicon: "/assets/favicon.ico"
+    favicon16x16: "/assets/favicon-16x16.png"
+    favicon32x32: "/assets/favicon-32x32.png"
+    apple_touch_icon: "/assets/apple-icon.png"
+
   homeInfoParams:
     Title: "Hi there \U0001F44B"
     Content: 'mineoが書く技術ブログ的な何かです'
