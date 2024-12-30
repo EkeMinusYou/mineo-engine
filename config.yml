@@ -2,13 +2,15 @@ baseURL: 'https://mineo-engine.com/'
 title: 'mineoの技術ブログ的な何か'
 author: mineo
 
-paginate: 5
 languageCode: en
 DefaultContentLanguage: en
 enableInlineShortcodes: true
 theme: hugo-PaperMod
 
 googleAnalytics: G-NGSW461B9F
+
+pagination:
+  pagesize: 5
 
 params:
   ShowReadingTime: false
