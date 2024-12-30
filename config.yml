@@ -44,6 +44,8 @@ params:
     - name: github
       url: 'https://github.com/EkeMinusYou'
 
+  amazonJpAffiliate: mineoengine-22 
+
 markup:
   tableOfContents:
     endLevel: 3

@@ -1,0 +1,22 @@
+{{ $css := resources.Get "css/shortcodes/amazon.css" | resources.Minify }}
+<link rel="stylesheet" href="{{ $css.Permalink }}">
+{{- $tag := .Site.Params.amazonJpAffiliate }}
+{{- $asin := .Get "asin" -}}
+{{- $title := .Get "title" -}}
+{{- $img := .Get "img" -}}
+<div class="amazon-widget">
+  <a href="https://www.amazon.co.jp/gp/product/{{ $asin }}/?tag={{ $tag }}"></a>
+  <div class="amazon-widget-img">
+    <img src="{{ $img }}" />
+  </div>
+  
+  <div class="amazon-widget-info">
+    <span class="amazon-widget-title">
+      {{ $title }}
+    </span>
+    <span class="amazon-widget-via">
+      <img src="https://www.amazon.co.jp/favicon.ico" />
+      amazon.co.jp
+    </span>
+  </div>
+</div>
