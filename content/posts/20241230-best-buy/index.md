@@ -4,11 +4,9 @@ date: 2024-12-30T21:41:36+09:00
 ---
 
 ## はじめに
-よく年末に散見されるあれです。
+年末に散見される例のあれです。
 
 ### ヒツジのいらない掛け布団
-
-
 {{< amazon asin="B0CRYLSRPZ" title="ヒツジのいらないかけ布団 -ファイヤーブースト- シングル ブラック 掛け布団 冬用 かけ布団 用掛け布団 掛け布団 冬 シングル掛け布団 丸洗いOK" img="https://m.media-amazon.com/images/I/41rbGirEyFL._SL160_.jpg" >}}
 
 ヒツジのいらない枕で有名な太陽さんの掛け布団です。めちゃめちゃオススメです。
@@ -26,7 +24,6 @@ https://www.makuake.com/project/taiyo46/
 この商品で、十分過ぎるほどに暖かいので、もしかしたら、現行のものの方がオススメかもです。
 
 ### エクスプロージョンのプロテイン
-
 今まで、マイプロテインのプロテインを飲んでいましたが、エクスプロージョンのプロテインの方が、安くて美味しい！マイプロテインは、セール時に買うようにしていましたが、それより安いです。
 
 {{< amazon asin="B06Y69FKT2" title="エクスプロージョン プロテイン 3kg ホエイプロテイン (ミルクチョコレート味/大容量/国内製造/WPC) X-PLOSION" img="https://m.media-amazon.com/images/I/41K9P8vabVL._SL160_.jpg" >}}
@@ -38,7 +35,6 @@ https://www.makuake.com/project/taiyo46/
 ヨーグルト味がおいしいです。
 
 ### CMF by Nothing Watch Pro 2
-
 CMFのスマートウォッチです。
 
 {{< amazon asin="B0D5431VSX" title="CMF by Nothing Watch Pro 2" img="https://m.media-amazon.com/images/I/411cXnHNK-L._SL160_.jpg" >}}
@@ -50,4 +46,3 @@ CMFのスマートウォッチです。
 - 見た目がおしゃれ
 
 このお値段でこの性能はシンプルにすごいと思いました。ただ、iPhoneとの連携がたびたび途切れるのがたまにきずです。アップデートが定期的に行われていて、徐々に改善している気はしますが...
-
