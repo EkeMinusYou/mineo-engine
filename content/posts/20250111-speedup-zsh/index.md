@@ -282,9 +282,9 @@ zsh -i -c exit  0.09s user 0.08s system 91% cpu 0.188 total
 zsh -i -c exit  0.09s user 0.08s system 86% cpu 0.194 total
 ```
 
-### weztermをやめてalaccityにする
+### weztermをやめてalacrittyにする
 
-このあたりで、手がなくなってきたので、weztermではなくalaccityを試しに使ってみました。100msくらい速くなりました。こんなに変わるとは...
+このあたりで、手がなくなってきたので、weztermではなくalacrittyを試しに使ってみました。100msくらい速くなりました。こんなに変わるとは...
 
 ```shell
 zsh -i -c exit  0.04s user 0.03s system 80% cpu 0.088 total
