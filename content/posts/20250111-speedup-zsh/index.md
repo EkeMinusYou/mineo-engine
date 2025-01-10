@@ -5,7 +5,7 @@ date: 2025-01-11T02:42:53+09:00
 
 
 ## はじめに
-zshの起動速度が遅くて高速化しました。
+zshの起動速度が遅かったので高速化しました。
 
 ## 前提
 
@@ -28,7 +28,7 @@ profilingもしましたが、あまり参考にならなかったので、そ�
 
 ## なにもしていない状態
 
-1.2s程度でした。
+1.2s程度でした。やばいですね。
 
 ```shell
 zsh -i -c exit  0.75s user 0.35s system 76% cpu 1.428 total
@@ -115,9 +115,7 @@ zsh -i -c exit  0.13s user 0.09s system 85% cpu 0.263 total
 ```
 
 なので、これらをどうにかする方法を考えます。
-source/evalを使っているのは補完目的なので、リアルタイムである必要はありません。
-
-そのため、ファイルに出力しておいて通常はそちらをsourceして、更新は非同期で実行すればよいと考えました。
+source/evalを使っているのは補完目的なので、常にコマンドを実行して、最新を取得する必要はありません。そのため、ファイルに出力しておいて通常はそちらをsourceして、更新は非同期で実行すればよいと考えました。
 
 ※ 最終的には、別のスクリプトで定期的にファイル出力を実行するようにしたので、.zshrcとしてはsourceするだけとなりました。
 
@@ -255,7 +253,7 @@ zsh -i -c exit  0.09s user 0.08s system 66% cpu 0.247 total
 
 ### sourceでファイルを読込んでいる箇所を遅延読み込みする
 
-直接ファイルをsourceしている箇所が時間がかかってそうでした。sheldonでzsh-deferを使っていたので、それを使うようにしました。
+直接ファイルをsourceしている箇所が時間がかかってそうでした。sheldonでzsh-deferをインストールしたので、それを使うようにしました。
 
 ```shell
 # autopair
@@ -284,7 +282,7 @@ zsh -i -c exit  0.09s user 0.08s system 86% cpu 0.194 total
 
 ### weztermをやめてalaccityにする
 
-このあたりで、手がなくなってきたので、weztermではなくalaccityにしました。100msくらい速くなりました。こんなに変わるとは...
+このあたりで、手がなくなってきたので、weztermではなくalaccityを試しに使ってみました。100msくらい速くなりました。こんなに変わるとは...
 
 ```shell
 zsh -i -c exit  0.04s user 0.03s system 80% cpu 0.088 total
@@ -323,10 +321,11 @@ zsh -i -c exit  0.04s user 0.02s system 92% cpu 0.067 total
 zsh -i -c exit  0.04s user 0.02s system 92% cpu 0.066 total
 zsh -i -c exit  0.04s user 0.02s system 92% cpu 0.066 total
 zsh -i -c exit  0.04s user 0.02s system 93% cpu 0.066 total
-zsh -i -c exit  0.04s user 0.02s system 92% cpu 0.066 totalj
+zsh -i -c exit  0.04s user 0.02s system 92% cpu 0.066 total
 ```
 
 ## おわりに
 
+- 20倍速くなったぜ！
 - コマンド実行とsourceがたいていの原因だった
 - alacritty最強！
