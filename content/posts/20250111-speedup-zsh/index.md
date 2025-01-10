@@ -45,6 +45,8 @@ zsh -i -c exit  0.59s user 0.26s system 70% cpu 1.202 total
 
 ## やったこと
 
+ひとすら、`.zshrc`を書き換えていきます。
+
 ### `brew --prefix` を`$HOMEBREW_PREFIX`に置き変える
 Macなのでhomebrewを使っていましたが、以下のようなbrew コマンドに時間がかかっていたようなので、環境変数を参照するようにしました。
 
@@ -117,7 +119,7 @@ zsh -i -c exit  0.13s user 0.09s system 85% cpu 0.263 total
 なので、これらをどうにかする方法を考えます。
 source/evalを使っているのは補完目的なので、常にコマンドを実行して、最新を取得する必要はありません。そのため、ファイルに出力しておいて通常はそちらをsourceして、更新は非同期で実行すればよいと考えました。
 
-※ 最終的には、別のスクリプトで定期的にファイル出力を実行するようにしたので、.zshrcとしてはsourceするだけとなりました。
+※ 最終的には、別のスクリプトで定期的にファイル出力を実行するようにしたので、`.zshrc`としてはsourceするだけとなりました。
 
 ```shell
 local script_dir="$HOME/.zsh/local.script"
