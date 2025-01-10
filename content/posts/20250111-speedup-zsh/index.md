@@ -45,7 +45,7 @@ zsh -i -c exit  0.59s user 0.26s system 70% cpu 1.202 total
 
 ## やったこと
 
-ひとすら、`.zshrc`を書き換えていきます。
+ひとすら`.zshrc`を書き換えていきます。
 
 ### `brew --prefix` を`$HOMEBREW_PREFIX`に置き変える
 Macなのでhomebrewを使っていましたが、以下のようなbrew コマンドに時間がかかっていたようなので、環境変数を参照するようにしました。
