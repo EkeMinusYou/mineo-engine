@@ -73,6 +73,10 @@ zsh -i -c exit  0.52s user 0.20s system 72% cpu 0.988 total
 ### `aqua root-dir` も環境変数に置き換える
 一部のツールはaquaを使っていたので、aquaの設定も入っていました。こちらも、`aqua root-dir` コマンドに時間がかかっているようでした。
 
+以下を参考にコマンドを使わない形式にしました。
+
+https://aquaproj.github.io/docs/install/#2-set-the-environment-variable-path
+
 ```diff
 - export PATH="$(aqua root-dir)/bin:$PATH"
 + export PATH="${AQUA_ROOT_DIR:-${XDG_DATA_HOME:-$HOME/.local/share}/aquaproj-aqua}/bin:$PATH"
@@ -117,9 +121,9 @@ zsh -i -c exit  0.13s user 0.09s system 85% cpu 0.263 total
 ```
 
 なので、これらをどうにかする方法を考えます。
-source/evalを使っているのは補完目的なので、常にコマンドを実行して、最新を取得する必要はありません。そのため、ファイルに出力しておいて通常はそちらをsourceして、更新は非同期で実行すればよいと考えました。
+source/evalを使っているのは補完目的です。常にコマンドを実行して、最新を取得する必要はありません。そのため、事前にファイルにコマンドの結果を出力しておいて、そちらをsourceして、コマンド出力結果の更新は非同期で実行すればよいと考えました。
 
-※ 最終的には、別のスクリプトで定期的にファイル出力を実行するようにしたので、`.zshrc`としてはsourceするだけとなりました。
+※ 最終的には別のスクリプトで定期的にファイル出力を実行するようにしたので、`.zshrc`としてはsourceするだけとなりました。
 
 ```shell
 local script_dir="$HOME/.zsh/local.script"
@@ -147,11 +151,11 @@ local_script_setup "direnv" "direnv hook zsh"
 local_script_setup "npm" "npm completion"
 ```
 
-こうすることで、起動時は事前に保存したファイルをsourceしかつ、非同期でファイルを更新するようにできました。変更があれば、次回から適用されることになるので、そこだけ注意です。
+起動時は事前に保存したファイルをsourceしかつ、非同期でファイルを更新するようにできました。変更があれば、次回から適用されることになるので、そこだけ注意です。
 
-あまり、知見がないので、もっとよいやり方があるかもしれません。
+あまり知見がないので、もっとよいやり方があるかもしれません。
 
-ただ、これで300msまで速くなりました。
+これで300msまで速くなりました。
 
 ```shell
 zsh -i -c exit  0.29s user 0.22s system 89% cpu 0.576 total
@@ -328,6 +332,6 @@ zsh -i -c exit  0.04s user 0.02s system 92% cpu 0.066 total
 
 ## おわりに
 
-- 20倍速くなったぜ！
 - コマンド実行とsourceがたいていの原因だった
+- 20倍速くなったぜ！
 - alacritty最強！
