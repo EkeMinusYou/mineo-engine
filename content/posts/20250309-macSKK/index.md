@@ -1,5 +1,5 @@
 ---
-title: "20250309 yaskkserv2を導入してmacSKKと連携する"
+title: "yaskkserv2を導入してmacSKKと連携する"
 date: 2025-03-09T16:18:08+09:00
 ---
 
