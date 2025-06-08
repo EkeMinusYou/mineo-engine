@@ -57,6 +57,6 @@ devcontainer exec --workspace-folder . --config ~/.config/devcontainer/claude/de
 
 注意点として、コンテナが残り続けてしまいますが、Dev Container CLI では削除できないので、docker コマンドを使う必要があります。
 
-Claude Code だけを使うなら、VSCode の中でコードを書くよりもシンプルかもしれません。並列作業もしやすそうです。
+Claude Code だけを使うなら、VSCode の中で対話するミニマムでよいかもしれません。並列作業もしやすそうです。
 
 Enjoy!
