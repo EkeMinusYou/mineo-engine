@@ -8,7 +8,7 @@ Claude Code の勢いがすさまじいですね。
 ベストプラクティスっぽいものを考えたのでメモです。以下の要素がある人向けです。
 
 - Claude Code を使いたい
-- セキュリティのため、devcontainer を使いたい
+- セキュリティ確保のため、devcontainer を使いたい
 - でも、VSCode / JetBrain製品 は使いたくない
 - 共通の devcontainer.json を利用したい
 
