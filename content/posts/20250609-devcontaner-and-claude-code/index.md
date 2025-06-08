@@ -49,7 +49,7 @@ Claude Code で開発したいリポジトリに移動します。
 devcontainer up --workspace-folder . --config ~/.config/devcontainer/claude/devcontainer.json
 ```
 
-以下で、Claude Code を立ち上げられます。
+以下で、Claude Code を実行します。
 
 ```bash
 devcontainer exec --workspace-folder . --config ~/.config/devcontainer/claude/devcontainer.json claude
