@@ -3,6 +3,9 @@ title: "Dev Container CLI で Claude Code を使う"
 date: 2025-06-09T00:07:12+09:00
 ---
 
+
+Claude Code の勢いがすさまじいですね。
+
 ベストプラクティスっぽいものを考えたのでメモです。以下の要素がある人向けです。
 
 - Claude Code を使いたい
