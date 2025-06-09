@@ -21,6 +21,7 @@ brew install devcontainer
 共通の `devcontainer.json` を用意します。`~/.config/devcontainer/claude/devcontainer.json` とかに配置するとよいでしょう。
 
 ちなみに、私のはこんな感じです。
+`.claude` を共有することで、devcontainerであることを気にすることなく、利用することができます。
 
 ```json
 {
