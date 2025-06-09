@@ -9,7 +9,7 @@ Claude Code の勢いがすさまじいですね。
 
 - Claude Code を使いたい
 - セキュリティ確保のため、devcontainer を使いたい
-- でも、VSCode / JetBrain製品 は使いたくない
+- でも、VSCode / JetBrain製品 は起動したくない
 - 共通の devcontainer.json を利用したい
 
 [Dev Container CLI](https://github.com/devcontainers/cli) を install しましょう。特に書かれていないですが、brew でも install できます。
