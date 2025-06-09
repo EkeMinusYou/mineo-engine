@@ -59,4 +59,10 @@ devcontainer exec --workspace-folder . --config ~/.config/devcontainer/claude/de
 
 Claude Code だけを使うなら、VSCode の中で対話するよりミニマムでよいかもしれません。並列作業もしやすそうです。
 
+私は、`.zshrc` に alias を登録しました。これで、`devclaude` だけで立ち上がるので便利です。
+
+```
+alias devclaude="devcontainer up --workspace-folder . --config ~/.config/devcontainer/claude/devcontainer.json && devcontainer exec --workspace-folder . --config ~/.config/devcontainer/claude/devcontainer.json claude"
+```
+
 Enjoy!
