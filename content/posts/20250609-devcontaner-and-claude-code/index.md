@@ -1,5 +1,5 @@
 ---
-title: "Terminal で生活する人のための Dev Container CLI + Claude Code"
+title: "ターミナル で生活する人のための Dev Container CLI + Claude Code"
 date: 2025-06-09T00:07:12+09:00
 ---
 
