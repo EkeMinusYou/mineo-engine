@@ -36,8 +36,9 @@ brew install devcontainer
   },
   "mounts": [
     "type=bind,source=${localEnv:HOME}/.gitconfig,target=/home/vscode/.gitconfig,readonly",
+    "type=bind,source=${localEnv:HOME}/.claude,target=/home/vscode/.claude",
     "type=bind,source=${localEnv:HOME}/.claude/settings.json,target=/home/vscode/.claude/settings.json,readonly"
-  ],
+  ]
 }
 ```
 
