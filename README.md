@@ -17,4 +17,4 @@ To run the same build check as CI:
 hugo --panicOnWarning
 ```
 
-CI installs the latest Hugo through Homebrew and deploys with Firebase CLI 15.34.0. The CLI version is pinned in `.github/workflows/firebase-hosting-merge.yml` to avoid the [Hosting Service Usage permission regression](https://github.com/firebase/firebase-tools/issues/11335).
+CI runs on Ubuntu with Hugo Extended 0.169.0 from its official GitHub release and deploys with Firebase CLI 15.34.0. Both versions are pinned in `.github/workflows/firebase-hosting-merge.yml`; the Firebase CLI pin avoids the [Hosting Service Usage permission regression](https://github.com/firebase/firebase-tools/issues/11335).

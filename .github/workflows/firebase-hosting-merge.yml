@@ -8,15 +8,22 @@ name: Deploy to Firebase Hosting on merge
       - master
 jobs:
   build_and_deploy:
-    runs-on: macos-latest
+    runs-on: ubuntu-latest
+    env:
+      HUGO_VERSION: '0.169.0'
     steps:
       - uses: actions/checkout@v7.0.1
         with:
           submodules: recursive
       - name: Install Hugo
-        run: brew install hugo
+        run: |
+          curl --fail --silent --show-error --location --retry 3 \
+            "https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_extended_${HUGO_VERSION}_linux-amd64.tar.gz" \
+            --output "$RUNNER_TEMP/hugo.tar.gz"
+          tar --extract --gzip --file "$RUNNER_TEMP/hugo.tar.gz" --directory "$RUNNER_TEMP" hugo
+          "$RUNNER_TEMP/hugo" version
       - name: Build site
-        run: hugo --panicOnWarning
+        run: '"$RUNNER_TEMP/hugo" --panicOnWarning'
       - uses: FirebaseExtended/action-hosting-deploy@v0.11.0
         with:
           repoToken: '${{ secrets.GITHUB_TOKEN }}'
