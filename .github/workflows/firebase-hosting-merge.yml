@@ -23,4 +23,6 @@ jobs:
           firebaseServiceAccount: '${{ secrets.FIREBASE_SERVICE_ACCOUNT_MINEO_ENGINE }}'
           channelId: live
           projectId: mineo-engine
-          firebaseToolsVersion: '15.35.0'
+          # Work around the Hosting Service Usage permission regression.
+          # https://github.com/firebase/firebase-tools/issues/11335
+          firebaseToolsVersion: '15.34.0'
