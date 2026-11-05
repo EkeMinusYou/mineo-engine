@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="1030" viewBox="0 0 1120 1030" role="img" aria-labelledby="title desc">
+<title id="title">最後の改善で変えた認証の同期</title>
+<desc id="desc">通常のログインでは、中央でのセッション更新と全地域の反映確認を待つ方式から、固定の認証担当がセッションを管理する方式に変更した。公開データとBANの全地域同期は維持した。</desc>
+<rect width="1120" height="1030" rx="18" fill="#ffffff"/>
+<g font-family="&#x27;Hiragino Kaku Gothic ProN&#x27;, &#x27;Noto Sans CJK JP&#x27;, &#x27;Arial Unicode MS&#x27;, sans-serif">
+<text x="36" y="52" font-size="34" fill="#172033" font-weight="700" text-anchor="start">最後の改善で変えた認証の同期</text>
+<text x="36" y="88" font-size="22" fill="#536174" font-weight="400" text-anchor="start">通常のログインが成功するまでの流れ</text>
+<rect x="28" y="112" width="518" height="730" rx="14" fill="#f8fafc" stroke="#dce3ec"/>
+<text x="52" y="154" font-size="28" fill="#2563eb" font-weight="700" text-anchor="start">改善前  17:31</text>
+<text x="52" y="192" font-size="22" fill="#172033" font-weight="400" text-anchor="start">237,624点 ／ ログイン平均 約726ms</text>
+<rect x="56" y="226" width="462" height="88" rx="14" fill="#ffffff" stroke="#cbd5e1"/>
+<text x="287.0" y="278.0" font-size="23" fill="#172033" font-weight="400" text-anchor="middle">ログインを受け付ける</text>
+<line x1="287" y1="322" x2="287" y2="337" stroke="#2563eb" stroke-width="3" stroke-dasharray=""/>
+<path d="M280,334 L287,347 L294,334" fill="none" stroke="#2563eb" stroke-width="3"/>
+<rect x="574" y="112" width="518" height="730" rx="14" fill="#f8fafc" stroke="#dce3ec"/>
+<text x="598" y="154" font-size="28" fill="#047857" font-weight="700" text-anchor="start">改善後  17:49</text>
+<text x="598" y="192" font-size="22" fill="#172033" font-weight="400" text-anchor="start">464,395点 ／ ログイン平均 約0.38ms</text>
+<rect x="602" y="226" width="462" height="88" rx="14" fill="#ffffff" stroke="#cbd5e1"/>
+<text x="833.0" y="278.0" font-size="23" fill="#172033" font-weight="400" text-anchor="middle">ログインを受け付ける</text>
+<line x1="833" y1="322" x2="833" y2="337" stroke="#047857" stroke-width="3" stroke-dasharray=""/>
+<path d="M826,334 L833,347 L840,334" fill="none" stroke="#047857" stroke-width="3"/>
+<rect x="56" y="358" width="462" height="106" rx="14" fill="#ffffff" stroke="#cbd5e1"/>
+<text x="287.0" y="403.0" font-size="23" fill="#172033" font-weight="400" text-anchor="middle">中央の状態管理で</text>
+<text x="287.0" y="435.0" font-size="23" fill="#172033" font-weight="400" text-anchor="middle">セッションを更新・永続化</text>
+<line x1="287" y1="473" x2="287" y2="512" stroke="#2563eb" stroke-width="3" stroke-dasharray=""/>
+<path d="M280,509 L287,522 L294,509" fill="none" stroke="#2563eb" stroke-width="3"/>
+<rect x="56" y="534" width="462" height="110" rx="14" fill="#eff6ff" stroke="#2563eb"/>
+<text x="287.0" y="581.0" font-size="23" fill="#172033" font-weight="400" text-anchor="middle">全地域へセッションを複製</text>
+<text x="287.0" y="613.0" font-size="23" fill="#172033" font-weight="400" text-anchor="middle">反映確認を待つ</text>
+<line x1="287" y1="654" x2="287" y2="692" stroke="#2563eb" stroke-width="3" stroke-dasharray=""/>
+<path d="M280,689 L287,702 L294,689" fill="none" stroke="#2563eb" stroke-width="3"/>
+<rect x="56" y="714" width="462" height="88" rx="14" fill="#ffffff" stroke="#cbd5e1"/>
+<text x="287.0" y="766.0" font-size="23" fill="#172033" font-weight="400" text-anchor="middle">ログイン成功応答</text>
+<rect x="602" y="358" width="462" height="106" rx="14" fill="#ffffff" stroke="#cbd5e1"/>
+<text x="833.0" y="403.0" font-size="23" fill="#172033" font-weight="400" text-anchor="middle">固定の認証担当で</text>
+<text x="833.0" y="435.0" font-size="23" fill="#172033" font-weight="400" text-anchor="middle">セッションを更新・永続化</text>
+<line x1="833" y1="473" x2="833" y2="512" stroke="#047857" stroke-width="3" stroke-dasharray=""/>
+<path d="M826,509 L833,522 L840,509" fill="none" stroke="#047857" stroke-width="3"/>
+<rect x="602" y="534" width="462" height="110" rx="14" fill="#ecfdf5" stroke="#047857"/>
+<text x="833.0" y="597.0" font-size="23" fill="#172033" font-weight="400" text-anchor="middle">ログイン成功応答</text>
+<text x="833" y="715" font-size="25" fill="#047857" font-weight="700" text-anchor="middle">全地域の反映確認を</text>
+<text x="833" y="753" font-size="25" fill="#047857" font-weight="700" text-anchor="middle">通常のログイン経路から外す</text>
+<rect x="28" y="866" width="1064" height="84" rx="14" fill="#f1f5f9" stroke="#dce3ec"/>
+<text x="560" y="902" font-size="23" fill="#172033" font-weight="400" text-anchor="middle">投稿・友達関係などの公開データとBANは</text>
+<text x="560" y="935" font-size="23" fill="#172033" font-weight="700" text-anchor="middle">引き続き全地域への同期を維持</text>
+<text x="36" y="988" font-size="20" fill="#536174" font-weight="400" text-anchor="start">認証担当が別地域にある場合は、その担当への転送が必要。</text>
+<text x="36" y="1016" font-size="19" fill="#536174" font-weight="400" text-anchor="start">平均応答時間は各RUNのアクセスログ集計から算出。</text>
+</g>
+</svg>
