@@ -1,18 +1,16 @@
 baseURL: 'https://mineo-engine.com/'
 title: 'mineoの技術ブログ的な何か'
-author: mineo
 
-languageCode: en
+locale: en
 DefaultContentLanguage: en
 enableInlineShortcodes: true
 theme: hugo-PaperMod
 
-googleAnalytics: G-NGSW461B9F
-
 pagination:
-  pagesize: 5
+  pagerSize: 5
 
 params:
+  author: mineo
   ShowReadingTime: false
   contentTypeName: posts
   defaultTheme: auto
@@ -88,6 +86,8 @@ privacy:
     privacyEnhanced: true
 
 services:
+  googleAnalytics:
+    id: G-NGSW461B9F
   instagram:
     disableInlineCSS: true
   twitter:
